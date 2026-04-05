@@ -9,5 +9,11 @@ void main() {
   var name3; //var 키워드를 통해서 초기화를 안해주면 dynamic으로 세팅됨.
   dynamic name4; //dynamic 키워드 자체를 사용할 수도 있음.
 
-  
+  //nul safety : 개발자가 null을 참조할 수 없도록 하는 것.
+  String? nico = 'nico'; //변수의 타입 뒤에 ?를 붙이면 null도 넣을 수 있는 변수가 됨. ?가 없으면 null 못들어감
+  nico = null;
+  // if(nico != null){ //런타임 오류를 막기 위해서 null인 것을 체크해줘야함.
+  //     nico.isNotEmpty; //컴파일러가 변수가 null일 수도 있다는 것을 알기 때문에 length 같은 타입 속성을 쓰려할 때 경고를 해줌.
+  // }
+  nico?.isNotEmpty; //if를 써도 되지만 이런식으로 변수명 뒤에 ?를 붙혀줄 수도 있음. 여기서 '변수명?'는 변수안에 null안들어잇지?하고 물어보는거임.
 }
