@@ -16,4 +16,9 @@ void main() {
   //     nico.isNotEmpty; //컴파일러가 변수가 null일 수도 있다는 것을 알기 때문에 length 같은 타입 속성을 쓰려할 때 경고를 해줌.
   // }
   nico?.isNotEmpty; //if를 써도 되지만 이런식으로 변수명 뒤에 ?를 붙혀줄 수도 있음. 여기서 '변수명?'는 변수안에 null안들어잇지?하고 물어보는거임.
+  
+  final name5 = 'nico'; //값을 변경할 수 없음. 자바스크립트의 const같은 개념
+  // name5='nico'; //에러
+
+  
 }
