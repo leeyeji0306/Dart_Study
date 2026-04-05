@@ -20,5 +20,9 @@ void main() {
   final name5 = 'nico'; //값을 변경할 수 없음. 자바스크립트의 const같은 개념
   // name5='nico'; //에러
 
-  
+  //late : final이나 var 앞에 붙어서 초기 데이터 없이 변수를 선언할 수 있게 해줌.
+  //쓰임새 : api에서 데이터를 가져와서 넣어줄 수 있음.
+  late final String name6;
+  //api에서 데이터 받아오기
+  name6 = 'nico';
 }
