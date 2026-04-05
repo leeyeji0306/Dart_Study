@@ -1,6 +1,6 @@
 void main() {
   print('hello world') //프린트 함수
-  var name = '니꼬'; //함수, 메소드 내부에서 지역변수 선언할 때
+  var name = '니꼬'; //함수, 메소드 내부에서 지역변수 선언할 때, 가능한한 이걸 많이 사용하기
   String name2 = '니꼬'; //클래서에서 변수나 속성(property)를 선언할 때
   name = 'nico';
   name2 = 'nico';
@@ -25,4 +25,7 @@ void main() {
   late final String name6;
   //api에서 데이터 받아오기
   name6 = 'nico';
+
+  //const : 컴파일타임컨스턴트를 만들어 준다. final과 같이 값을 변경할 수 없다. 자바스크립트의 const와 다르다.
+  //final과의 차이점 : 컴파일타임에 알고 있는 값이어야 한다.
 }
