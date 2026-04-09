@@ -23,4 +23,11 @@ void main() {
   numbers.first; //list의 첫번째 요소를 가져와라.
   numbers.last; //list의 마지막 요소를 가져와라.
   //collection if와 collection for을 지원한다.
+
+  var name1 = 'nico';
+  var age1 = 10;
+  var greeting = "Hello everyone, my name is $name1, and I'm ${age1 + 2}";
+  //문자열 쓰다가 안에 변수 내용을 넣고 싶을 때 !!!!! : "$변수명"
+  //문자열 쓰다가 안에 숫자 계산을 쓰고싶다면?? : "${변수명 + 값}"
+  print(greeting);
 }
