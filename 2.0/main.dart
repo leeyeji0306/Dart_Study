@@ -30,4 +30,13 @@ void main() {
   //문자열 쓰다가 안에 변수 내용을 넣고 싶을 때 !!!!! : "$변수명"
   //문자열 쓰다가 안에 숫자 계산을 쓰고싶다면?? : "${변수명 + 값}"
   print(greeting);
+
+  var oldFriends = ['nico', 'lynn'];
+  var newFriends = [
+    'lewis',
+    'ralph',
+    'darren',
+    for (var friend in oldFriends) "💓 $friend",
+  ]; //collection for : 위 처럼 다른 list를 돌면서 새로운 리스트에 그 값을 그대로 넣어줄 수도 있고 바꿔서 넣어줄 수도 있음(미쳤다!!!!!)
+  print(newFriends);
 }
