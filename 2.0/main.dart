@@ -39,4 +39,19 @@ void main() {
     for (var friend in oldFriends) "💓 $friend",
   ]; //collection for : 위 처럼 다른 list를 돌면서 새로운 리스트에 그 값을 그대로 넣어줄 수도 있고 바꿔서 넣어줄 수도 있음(미쳤다!!!!!)
   print(newFriends);
+
+  //Map : 자바스크립트에서의 객체, 파이썬에선 dictionary랑 비슷한 개념.
+  //형태 : var 변수명 = {'키' : value, '키' : value, '키', value......},
+  //      Map<키값 자료형, value값 자료형> = {'키', value, '키', value......}
+  var player = {'name': 'nico', 'xp': 19.99, 'superpower': false};
+  //value와 키에는 어떤 것이든(bool, double, int, string, num 등 모두 다!! 심지어 list 까지 ㄷㄷ..) 올 수 있음.
+  Map<int, bool> player1 = {1: true, 2: false, 3: true};
+  Map<List<int>, bool> player2 = {
+    [1, 2, 3, 5]: true,
+  };
+  //오 미친 List<Map<키 자료형, value 자료형>> 이것도 됨 ㄷㄷ...
+  List<Map<String, Object>> players = [
+    {'name': 'nico', 'xp': 199993.999},
+    {'name': 'nico', 'xp': 199993.999},
+  ];
 }
