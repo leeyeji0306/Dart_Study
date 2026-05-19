@@ -61,5 +61,5 @@ void main() {
   numberss.add(1);
   numberss.add(1);
   numberss.add(1);
-  print(numberss);
+  print(numberss); //{1, 2, 3, 4} => 1을 아무리 많이 넣어도 들어가지 않음.
 }
