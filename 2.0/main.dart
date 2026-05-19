@@ -54,4 +54,12 @@ void main() {
     {'name': 'nico', 'xp': 199993.999},
     {'name': 'nico', 'xp': 199993.999},
   ];
+
+  var numberss = {1, 2, 3, 4}; //Set<int>로 명시해줄 수도 있음.
+  //Set : 속한 모든 아이템들은 유니크함. vs List : 같은 값 여러번 들어갈 수 있음.
+  numberss.add(1);
+  numberss.add(1);
+  numberss.add(1);
+  numberss.add(1);
+  print(numberss);
 }
