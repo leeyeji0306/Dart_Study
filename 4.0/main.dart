@@ -1,8 +1,15 @@
 class Player {
   final String name;
   int xp;
+  String team;
+  int age;
 
-  Player(this.name, this.xp); //이거 생성자임 ㄷㄷ, 파라미터 위치 중요함.
+  Player({
+    required this.name,
+    required this.xp,
+    required this.team,
+    required this.age,
+  }); //이거 생성자임 ㄷㄷ, 파라미터 위치 중요함.
 
   void sayHello() {
     print("Hi my name is $name");
@@ -13,9 +20,14 @@ class Player {
 //변수를 사용할 때 this.을 사용하지 않음.
 
 void main() {
-  var player = Player('nico', 1500); //객체를 만들 땐 new 연산자를 쓰지 않음.
+  var player = Player(
+    name: 'nico',
+    xp: 1500,
+    team: 'red',
+    age: 21,
+  ); //객체를 만들 땐 new 연산자를 쓰지 않음.
   player.sayHello();
-  var player2 = Player('lynn', 2500);
+  var player2 = Player(name: 'lynn', xp: 2500, team: 'blue', age: 12);
   player2.sayHello();
 }
 
