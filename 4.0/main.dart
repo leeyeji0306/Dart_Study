@@ -1,6 +1,8 @@
 class Player {
-  final String name = 'nico';
-  int xp = 1500;
+  final String name;
+  int xp;
+
+  Player(this.name, this.xp); //이거 생성자임 ㄷㄷ, 파라미터 위치 중요함.
 
   void sayHello() {
     print("Hi my name is $name");
@@ -11,8 +13,10 @@ class Player {
 //변수를 사용할 때 this.을 사용하지 않음.
 
 void main() {
-  var player = Player(); //객체를 만들 땐 new 연산자를 쓰지 않음.
+  var player = Player('nico', 1500); //객체를 만들 땐 new 연산자를 쓰지 않음.
   player.sayHello();
+  var player2 = Player('lynn', 2500);
+  player2.sayHello();
 }
 
 //dart는 거의 다 class로 이루어져 있음. 매우매우 중요함.
