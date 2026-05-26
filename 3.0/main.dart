@@ -12,6 +12,7 @@ void main() {
   print(sayHello(age: 12, country: 'cicici', name: 'lalala'));
 }
 
+//position parameter : 평소에 사용하는 흔한 파라미터. 순서를 중요시 함. 각각의 위치를 외워서 작성해야 하기 때문에 불편함.
 //dart의 function은 named parameter라는 걸 지원함. named parameter? : 위의 코드와 같이 순서에 상관 없이 이름으로 그 파라미터에 값을 넣어주는 것.
 //named parameter은 사용자가 파라미터값을 안넣을 것을 두려워함.
 //해결방법 : default 값을 정해준다, 파라미터 앞에 required 키워드를 붙혀서 호출할 때 무조건 사용해야 하도록 한다.
