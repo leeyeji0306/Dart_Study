@@ -30,7 +30,7 @@ String sayHi(UserInfo userInfo) {
 }
 
 void main() {
-  sayHi({"name" : 'nico'})
+  sayHi({"name": 'nico'});
 }
 
 //position parameter : 평소에 사용하는 흔한 파라미터. 순서를 중요시 함. 각각의 위치를 외워서 작성해야 하기 때문에 불편함.
