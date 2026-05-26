@@ -15,14 +15,22 @@ String capitalizeName(String? name) {
   return name?.toUpperCase() ?? 'ANON';
 }
 
+typedef ListOfInts = List<int>;
+//타입 이름을 사용자가 지정할 수 있음.
+
+ListOfInts reverseListOfNumbers(List<int> list) {
+  var reversed = list.reversed;
+  return reversed.toList();
+}
+
+typedef UserInfo = Map<String, String>;
+
+String sayHi(UserInfo userInfo) {
+  return "Hi ${userInfo['name']}";
+}
+
 void main() {
-  // capitalizeName('nico');
-  // capitalizeName(null);
-  String? name;
-  name ??= 'nico';
-  name = null;
-  name ??= 'another';
-  print(name);
+  sayHi({"name" : 'nico'})
 }
 
 //position parameter : 평소에 사용하는 흔한 파라미터. 순서를 중요시 함. 각각의 위치를 외워서 작성해야 하기 때문에 불편함.
@@ -32,3 +40,4 @@ void main() {
 //optinal position parameter : 그 변수의 값이 들어올 수도 있고 안들어올 수도 있다(?로 표시)를 표시해주고 default 값을 정해준다.
 //??(QQ) : 좌항이 null이면 우항을 return, 좌항이 null이 아니면 그대로 좌항을 return
 //??=(null aware operator) : 좌항이 null이면 우항의 값을 좌항에 대입해라.
+//typedef : 원래 있던 데이터 타입을 사용자 정의 이름으로 정의하여 쓸 수 있게 하는 것.
