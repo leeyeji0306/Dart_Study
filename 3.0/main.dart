@@ -4,8 +4,25 @@ String sayHello(String name, int age, [String? country = 'cuba']) =>
 
 num plus(num a, num b) => a + b;
 
+String capitalizeName(String? name) {
+  // if (name != null) {
+  //   return name.toUpperCase();
+  // }
+  // return 'ANON';
+
+  // return name != null ? name.toUpperCase() : 'ANON';
+
+  return name?.toUpperCase() ?? 'ANON';
+}
+
 void main() {
-  print(sayHello('nico', 12));
+  // capitalizeName('nico');
+  // capitalizeName(null);
+  String? name;
+  name ??= 'nico';
+  name = null;
+  name ??= 'another';
+  print(name);
 }
 
 //position parameter : 평소에 사용하는 흔한 파라미터. 순서를 중요시 함. 각각의 위치를 외워서 작성해야 하기 때문에 불편함.
@@ -13,3 +30,5 @@ void main() {
 //named parameter은 사용자가 파라미터값을 안넣을 것을 두려워함.
 //해결방법 : default 값을 정해준다, 파라미터 앞에  키워드를 붙혀서 호출할 때 무조건 사용해야 하도록 한다.
 //optinal position parameter : 그 변수의 값이 들어올 수도 있고 안들어올 수도 있다(?로 표시)를 표시해주고 default 값을 정해준다.
+//??(QQ) : 좌항이 null이면 우항을 return, 좌항이 null이 아니면 그대로 좌항을 return
+//??=(null aware operator) : 좌항이 null이면 우항의 값을 좌항에 대입해라.
