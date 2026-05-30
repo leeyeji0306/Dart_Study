@@ -1,7 +1,12 @@
+//작은 실수들을 줄여주기 위해 Enum을 사용함. 예) team에 red를 redd로 쓴다던가, team에 blue를 bule로 쓴다던가 하는 실수들.
+enum Team { red, blue } //""(큰따옴표)를 쓰지 않음.
+
+enum XPLevel { beginner, mediun, pro }
+
 class Player {
   String name;
-  int xp;
-  String team;
+  XPLevel xp;
+  Team team;
 
   // Player.fromJson(Map<String, dynamic> playerJson)
   //   : name = playerJson['name'],
@@ -59,17 +64,17 @@ void main() {
   //   player.sayHello();
   // });
 
-  var nico = Player(name: 'nico', xp: 1200, team: 'red')
-    // nico.name = 'las';
-    // nico.xp = 1200000;
-    // nico.team = 'blue';
-    var potate = nico
+  var nico = Player(name: 'nico', xp: XPLevel.mediun, team: Team.red);
+  // nico.name = 'las';
+  // nico.xp = 1200000;
+  // nico.team = 'blue';
+  var potate = nico
     ..name = 'las'
-    ..xp = 1200000
-    ..team =
-        'blue' //위의 것과 같은 역할을 함.
+    ..xp = XPLevel.pro
+    ..team = Team.blue
     ..sayHello();
-    //.. : 앞의 .이 위의 클래스를 가르쳐서 접근할 수 있게 함. 아마 this 역할이지 않을까 싶음.
+  //위의 것과 같은 역할을 함.
+  //.. : 앞의 .이 위의 클래스를 가르쳐서 접근할 수 있게 함. 아마 this 역할이지 않을까 싶음.
 }
 
 //dart는 거의 다 class로 이루어져 있음. 매우매우 중요함.
