@@ -1,9 +1,21 @@
+//abstruct class(추상화 클래스) : 우리가 절대절대 작성할일 없는 클래스. 객체를 생성할 수 없음. 다른 클래스들이 직접 구현해야하는 메소드 들을 모아놓은 일종의 청사진이라고 보면됨.
+abstract class Human {
+  void walk(); //Human 클래스는 walk라는 메소드를 가지고 walk는 void를 반환한다 라고만 해놓는다.
+}
+
 //작은 실수들을 줄여주기 위해 Enum을 사용함. 예) team에 red를 redd로 쓴다던가, team에 blue를 bule로 쓴다던가 하는 실수들.
 enum Team { red, blue } //""(큰따옴표)를 쓰지 않음.
 
 enum XPLevel { beginner, mediun, pro }
 
-class Player {
+class Coach extends Human {
+  void walk() {
+    print('the coach is walking');
+  }
+}
+
+//다른 클래스에 상속하게 되면 그 메소드를 꼭 오버라이딩을 해줘야한다.
+class Player extends Human {
   String name;
   XPLevel xp;
   Team team;
@@ -18,6 +30,10 @@ class Player {
     required this.xp,
     required this.team,
   }); //이거 생성자임 ㄷㄷ, 파라미터 위치 중요함.
+
+  void walk() {
+    print("I'm walking");
+  }
 
   // Player.createBluePlayer({
   //   required String name,
