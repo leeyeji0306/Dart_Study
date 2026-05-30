@@ -1,19 +1,18 @@
 class Player {
-  final String name;
+  String name;
   int xp;
   String team;
 
-  Player.fromJson(Map<String, dynamic> playerJson)
-    : name = playerJson['name'],
-      xp = playerJson['xp'],
-      team = playerJson['team'];
+  // Player.fromJson(Map<String, dynamic> playerJson)
+  //   : name = playerJson['name'],
+  //     xp = playerJson['xp'],
+  //     team = playerJson['team'];
 
-  // Player({
-  //   required this.name,
-  //   required this.xp,
-  //   required this.team,
-  //   required this.age,
-  // }); //이거 생성자임 ㄷㄷ, 파라미터 위치 중요함.
+  Player({
+    required this.name,
+    required this.xp,
+    required this.team,
+  }); //이거 생성자임 ㄷㄷ, 파라미터 위치 중요함.
 
   // Player.createBluePlayer({
   //   required String name,
@@ -48,16 +47,28 @@ void main() {
   // player.sayHello();
   // var redPlayer = Player.createRedPlayer('lynn', 12);
   // redPlayer.sayHello();
-  var apiData = [
-    {"name": "nico", "team": "red", "xp": 0},
-    {"name": "lynn", "team": "red", "xp": 0},
-    {"name": "dal", "team": "red", "xp": 0},
-  ];
 
-  apiData.forEach((playerJson) {
-    var player = Player.fromJson(playerJson);
-    player.sayHello();
-  });
+  // var apiData = [
+  //   {"name": "nico", "team": "red", "xp": 0},
+  //   {"name": "lynn", "team": "red", "xp": 0},
+  //   {"name": "dal", "team": "red", "xp": 0},
+  // ];
+
+  // apiData.forEach((playerJson) {
+  //   var player = Player.fromJson(playerJson);
+  //   player.sayHello();
+  // });
+
+  var nico = Player(name: 'nico', xp: 1200, team: 'red')
+    // nico.name = 'las';
+    // nico.xp = 1200000;
+    // nico.team = 'blue';
+    var potate = nico
+    ..name = 'las'
+    ..xp = 1200000
+    ..team =
+        'blue' //위의 것과 같은 역할을 함.
+    ..sayHello();
 }
 
 //dart는 거의 다 class로 이루어져 있음. 매우매우 중요함.
