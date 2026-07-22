@@ -60,27 +60,52 @@
 //name을 수정할 수 없게 하기 위해서는 앞에 'final'을 붙혀줘야함.
 //변수를 사용할 때 this.을 사용하지 않음.
 
-class Human {
-  final String name;
-  Human({required this.name});
-  void sayHello() {
-    print("Hi my name is $name");
+// class Human {
+//   final String name;
+//   Human({required this.name});
+//   void sayHello() {
+//     print("Hi my name is $name");
+//   }
+// }
+
+class Strong {
+  final double strenghtLevel = 1500.99;
+}
+class QuickRunner {
+  void runQuick(){
+    print("ruuuuuuun!");
   }
+}
+class Tall {
+  final double height = 1.99;
 }
 
 enum Team { blue, red }
 
-class Player extends Human {
+// class Player extends Human {
+//   final Team team;
+
+//   Player({required this.team, required String name}) : super(name: name);
+//   //Player 생성자에서 온 name은 그 즉시 super 생성자로 전달됨.
+//   @override
+//   void sayHello() {
+//     super.sayHello();
+//     print("and I play for ${team}");
+//   }
+// }
+
+class Player with Strong, QuickRunner, Tall{
   final Team team;
 
-  Player({required this.team, required String name}) : super(name: name);
-  //Player 생성자에서 온 name은 그 즉시 super 생성자로 전달됨.
-  @override
-  void sayHello() {
-    super.sayHello();
-    print("and I play for ${team}");
-  }
+  Player({
+    required this.team,
+  })
 }
+//with : 다른 클래스의 프로퍼티와 메소드를 그냥 긁어도 오는 것.
+
+class Horse with Strong, QuickRunner{}
+
+class Kid with QuickRunner{}
 
 void main() {
   // var player = Player.createBluePlayer(
@@ -114,6 +139,10 @@ void main() {
   //위의 것과 같은 역할을 함.
   //.. : 앞의 .이 위의 클래스를 가르쳐서 접근할 수 있게 함. 아마 this 역할이지 않을까 싶음.
   var player = Player(team: Team.red, name: 'nico');
+  //Mixin : 생성자가 없는 클래스
+  //extend(상속)과 다른 개념임. 상속을 하면 그 클래스는 부모 클래스가 되는거고, 자식 클래스는 부모 클래스를 super를 통해 부를 수 있음. 그 순간 부모 클래스의 인스턴스가 됨.
+  //Mixin은 with라는 키워드를 사용하여 역할은 단순히 내부의 프로퍼티와 메소드들을 가져오는 것 뿐. 부모클래스가 되거나 하지 않으면서 그냥 빼오는 거라고 생각하면 쉬움.
+  //Mixin의 조건 : 생성자가 없는 클래스여야 한다.
 }
 
 //dart는 거의 다 class로 이루어져 있음. 매우매우 중요함.
